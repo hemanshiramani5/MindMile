@@ -1,12 +1,21 @@
-package com.example.mindmile.users
+package com.example.mindmile.model
+
+import com.google.firebase.Timestamp
 
 data class UserHabit(
-    var id: String = "",
-    var title: String = "",
-    var description: String = "",
-    var goalValue: Long = 0,
-    var goalUnit: String = "",
-    var color: String = "#000000",
-    var imageUrl: String = "",
-    var currentValue: Long = 0
+    val habitId: String? = "",
+    val userId: String? = "",
+    val originalHabitId: String? = "",
+    val title: String? = "",
+    val description: String? = "",
+    val habitType: String? = "Build", // Build or Quit
+    val goalValue: Int? = 0,
+    val goalUnit: String? = "",
+    val color: String? = "#5E81AC",
+    val imageUrl: String? = null,
+    val timeRange: String? = "Anytime",
+    val remindersEnabled: Boolean? = false,
+    val reminderTime: String? = "",
+    val startDate: Timestamp? = null,
+    val isActive: Boolean? = true
 )
